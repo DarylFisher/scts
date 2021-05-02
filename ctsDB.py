@@ -70,19 +70,32 @@ class CtsMODEL(db.Model):
 
 
 class CtsCOMPONENET(db.MODEL):
-    __tablename__ = 'CTS_MODEL'
+    __tablename__ = 'CTS_COMPONENT'
     COMPONENT_ID = db.Column(db.INTEGER,nullable=False, primary_key=True )
     CPY_CD = db.Column(db.String(30),  nullable=False)
     MODEL_ID = db.Column(db.INTEGER,  nullable=False)
     COMPONENT_NAME = db.Column(db.String(100),  nullable=False)
-    
+    COMPONENT_TYPE = db.Column(db.String(30),  nullable=False)
+    COMPONENT_FACTOR = db.Column(db.INTEGER,  nullable=False)
+    APPORTION_FACTOR = db.Column(db.INTEGER)
+    COMPONENET_NOTE = db.Column(db.String(100))
+    COMPONENT_CONDITION = db.Column(db.INTEGER)
+    COMPONENT_COST = db.Column(db.INTEGER)
 
+class CtsCONDITION(db.MODEL):
+    __tablename__ = 'CTS_CONDITION'
+    CONDITION_ID = db.Column(db.INTEGER,nullable=False, primary_key=True )
+    CPY_CD = db.Column(db.String(30),  nullable=False)
+    CONDITION_NAME = db.Column(db.String(100),  nullable=False)
+    CONDITION_STRING = db.Column(db.String(1000))
+    
 class CtsFunction(db.Model):
     __tablename__ = 'CTS_FUNCTION'
     FUNCTION_ID = db.Column(db.INTEGER,nullable=False, primary_key=True )
     CPY_CD = db.Column(db.String(30),  nullable=False)
     FUNCTION_TYPE = db.Column(db.String(30),  nullable=False)
-    ACT_DEFN_ID = = db.Column(db.INTEGER,nullable=False)
+    ACT_DEFN_ID = db.Column(db.INTEGER,nullable=False)
+
     
 class CfsFactor(db.Model):
     __tablename__ = 'CTS_FACTOR'    
@@ -93,10 +106,35 @@ class CfsFactor(db.Model):
     
 class CtsCosts(db.Model):
     __tablename__ = 'CTS_COSTS'    
-    COST_ID = = db.Column(db.INTEGER,nullable=False, primary_key=True )
+    COST_ID = db.Column(db.INTEGER,nullable=False, primary_key=True )
     CPY_CD = db.Column(db.String(30),  nullable=False)
+    COST_TYPE = db.Column(db.String(30),  nullable=False)
+    COST_BASIS = db.Column(db.String(30),  nullable=False)
     COST_NAME = db.Column(db.String(30),  nullable=False)
        
+class CtsModelRun(db.Model):
+    __tablename__ = 'CTS_MODEL_RUN'    
+    MODEL_RUN_ID = db.Column(db.INTEGER,nullable=False, primary_key=True )
+    MODEL_ID = db.Column(db.INTEGER,nullable=False)
+    CPY_CD = db.Column(db.String(30),  nullable=False)
+    MODEL_FROM_DATE = db.Column(db.Date),  nullable=False)
+    MODEL_TO_DATE = db.Column(db.Date),  nullable=False)
+    MODEL_RUN_FROM_TIME = db.Column(db.Time),  nullable=False)
+    MODEL_RUN_TO_TIME = db.Column(db.Time),  nullable=False)
+    RUN_RESULT = db.Column(db.NUMERIC)
+    RUN_APPORTION_RESULT = db.Column(db.NUMERIC)
+    RUN_COST = db.Column(db.NUMERIC)
+    
+class CtsModelRunResult(db.Model):
+    __tablename__ = 'CTS_MODEL_RUN_RESULT'    
+    MODEL_RESULT_ID = db.Column(db.INTEGER,nullable=False, primary_key=True )
+    MODEL_RUN_ID = db.Column(db.INTEGER,nullable=False )
+    COMPONENT_ID = db.Column(db.INTEGER,nullable=False )
+    CPY_CD = db.Column(db.String(30),  nullable=False)
+    RUN_RESULT = db.Column(db.NUMERIC)
+    RUN_APPORTION_RESULT = db.Column(db.NUMERIC)
+    RUN_COST = db.Column(db.NUMERIC)
+
     
     
     

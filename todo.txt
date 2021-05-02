@@ -3,6 +3,8 @@ To Do
 ------
 
 Integration of Activity 
+    Activities added by web service 
+
 
 Model Calculator
 
@@ -10,7 +12,32 @@ Maintenance Screens
     Activity Types
     Factors 
     Components 
+        elements that go into model 
+        a formula based on function of activity 
+        has a cost associated to it
     Costs 
     
 
 Model Results View 
+
+
+Cost 
+   Cost Type -- EquipMent, Employee, Diract Material
+   Cost Basis -- Per Use, Per Hour
+
+
+Components 
+-- Direct.  here the cost is applied  eg.  container charge, man hours picking
+-- Apportioned.  here cost apportioned based 
+
+
+
+
+
+Model Calculator 
+  Run a model 
+  Process all of the components 
+    For each component write a row to model run result table 
+    model run takes results of processing activity for period 
+    end of all components you total model runs and build model result 
+    
