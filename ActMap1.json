@@ -1,0 +1,30 @@
+{"Mappings":[{
+    "Name": "Activity Simple",
+    "Field Maps":
+        [
+            { "From": "Customer", "To":"Customer Group 1", "Transform":"None"},
+            { "From": "Date", "To":"Activity Date", "Transform":"None"},
+            { "From": "Work Type", "To":"Activity Type", "Transform":"None"},
+            { "From": "Sub Type", "To":"Activity Sub Type", "Transform":"None"},
+            { "From": "Employee Code", "To":"Activity Sub Type", "Transform":"None"},
+            { "From": "Location Area", "To":"Location Area", "Transform":"None"},
+            { "From": "Cases", "To":"Factor 1", "Transform":"None"},
+            { "From": "Containers", "To":"Factor 2", "Transform":"None"},
+            { "From": "Time", "To":"Factor 3", "Transform":"None"}
+        ],
+    "Functions":
+        [
+            {   "Name":"SiteFunction",
+                "FromFields": ["Facility","Warehouse"],
+                "ToFields": ["Site"],
+                "Function": "Concat"
+            }
+        ],
+    "Defaults":
+        [
+            {"Column": "Company", "Value": "Test"},
+            {"Column": "Equipment Code 1", "Value": "Default"}
+        ]
+
+}
+ ]}

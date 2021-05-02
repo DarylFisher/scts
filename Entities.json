@@ -1,0 +1,43 @@
+{
+    "Entity": [ {
+    "Name": "Activity",
+    "Table": "CTS_ACTIVITY",
+    "Columns":
+        [
+            { "Column":"Activity ID", "Data Type":"Primary", "Database":"ACT_ID", "Validator":"Generic"},
+            { "Column":"Company", "Data Type":"String", "Database":"CPY_CD", "Validator":"Generic"},
+            { "Column":"Site", "Data Type":"String", "Database":"SITE", "Validator":"Generic"},
+            { "Column":"Activity Date", "Data Type":"Date", "Database":"ACT_DATE", "Validator":"Generic"},
+            { "Column":"Activity Type", "Data Type":"String", "Database":"ACT_TYPE", "Validator":"List"},
+            { "Column":"Activity Sub Type", "Data Type":"String", "Database":"ACT_SUB_TYPE", "Validator":"List"},
+            { "Column":"Employee Code 1", "Data Type":"String", "Database":"EMP_CODE1", "Validator":"Generic"},
+            { "Column":"Employee Code 2", "Data Type":"String", "Database":"EMP_CODE2", "Validator":"Generic"},
+            { "Column":"Employee Code 3", "Data Type":"String", "Database":"EMP_CODE3", "Validator":"Generic"},
+            { "Column":"Equipment Code 1", "Data Type":"String", "Database":"EQP_CODE1", "Validator":"Generic"},
+            { "Column":"Equipment Code 2", "Data Type":"String", "Database":"EQP_CODE2", "Validator":"Generic"},
+            { "Column":"Equipment Code 3", "Data Type":"String", "Database":"EQP_CODE3", "Validator":"Generic"},
+            { "Column":"Location Code", "Data Type":"String", "Database":"LOC_CODE", "Validator":"Generic"},
+            { "Column":"Location Area", "Data Type":"String", "Database":"LOC_AREA", "Validator":"Generic"},
+            { "Column":"Customer Group 1", "Data Type":"String", "Database":"CUST_GRP1", "Validator":"Generic"},
+            { "Column":"Customer Group 2", "Data Type":"String", "Database":"CUST_GRP2", "Validator":"Generic"},
+            { "Column":"Customer Group 3", "Data Type":"String", "Database":"CUST_GRP3", "Validator":"Generic"},
+            { "Column":"Product Group 1", "Data Type":"String", "Database":"PROD_GRP1", "Validator":"Generic"},
+            { "Column":"Product Group 2", "Data Type":"String", "Databa`se":"PROD_GRP2", "Validator":"Generic"},
+            { "Column":"Product Group 3", "Data Type":"String", "Database":"PROD_GRP3", "Validator":"Generic"},
+            { "Column":"Activity Ref 1", "Data Type":"String", "Database":"ACT_RREF_ID1", "Validator":"Generic"},
+            { "Column":"Activity Ref 2", "Data Type":"String", "Database":"ACT_RREF_ID2", "Validator":"Generic"},
+            { "Column":"Activity Ref 3", "Data Type":"String", "Database":"ACT_RREF_ID3", "Validator":"Generic"},
+            { "Column":"Act Factor 1", "Data Type":"Numeric", "Database":"ACT_FACT1", "Validator":"Generic"},
+            { "Column":"Act Factor 2", "Data Type":"Numeric", "Database":"ACT_FACT2", "Validator":"Generic"},
+            { "Column":"Act Factor 3", "Data Type":"Numeric", "Database":"ACT_FACT3", "Validator":"Generic"},
+            { "Column":"Act Factor 4", "Data Type":"Numeric", "Database":"ACT_FACT4", "Validator":"Generic"},
+            { "Column":"Act Factor 5", "Data Type":"Numeric", "Database":"ACT_FACT5", "Validator":"Generic"},
+            { "Column":"Act Factor 6", "Data Type":"Numeric", "Database":"ACT_FACT6", "Validator":"Generic"},
+            { "Column":"Act Factor 7", "Data Type":"Numeric", "Database":"ACT_FACT7", "Validator":"Generic"},
+            { "Column":"Act Factor 8", "Data Type":"Numeric", "Database":"ACT_FACT8", "Validator":"Generic"},
+            { "Column":"Act Factor 9", "Data Type":"Numeric", "Database":"ACT_FACT9", "Validator":"Generic"},
+            { "Column":"Act Factor 0", "Data Type":"Numeric", "Database":"ACT_FACT0", "Validator":"Generic"}
+        ]
+    }]
+}
+

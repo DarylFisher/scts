@@ -1,0 +1,13 @@
+{
+    "Integrations":
+    [
+        {
+            "Integration Name":"Picking Activity",
+            "Poller": "File Poller",
+            "Parser": "ExcelRowParser",
+            "Mapper:": "Activity Simple",
+            "Updater": "Activity"
+        }
+    ]
+
+}
